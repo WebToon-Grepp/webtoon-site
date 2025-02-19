@@ -12,8 +12,8 @@ webtoon-site의 커밋 메시지는 기능/모듈명과 세부 내용을 포함�
 ```
 
 예시:
-- site :: Django 프로젝트 초기화
-- site :: 웹툰 목록 페이지 구현
-- site :: 웹툰 차트 시각화 기능 추가
-- site :: 사용자 인터페이스 개선
-- site :: Superset 대시보드 통합
+- site:: Django 프로젝트 초기화
+- site:: 웹툰 목록 페이지 구현
+- site:: 웹툰 차트 시각화 기능 추가
+- site:: 사용자 인터페이스 개선
+- site:: Superset 대시보드 통합
