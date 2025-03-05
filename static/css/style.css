@@ -1,0 +1,296 @@
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 100;
+    src: url(https://d1nuzc1w51n1es.cloudfront.net/9d23ca66b990f383e7a7.woff2) format("woff2"),url(https://d1nuzc1w51n1es.cloudfront.net/cc4e8944d9cfc5a2a656.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://d1nuzc1w51n1es.cloudfront.net/e2557c2be18ddd169ee9.woff2) format("woff2"),url(https://d1nuzc1w51n1es.cloudfront.net/45736342560b8c933202.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://d1nuzc1w51n1es.cloudfront.net/e95adf0e9aeddac43f42.woff2) format("woff2"),url(https://d1nuzc1w51n1es.cloudfront.net/957d49ad23632e4a9349.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://d1nuzc1w51n1es.cloudfront.net/e5d0c16f11ebac0c56d2.woff2) format("woff2"),url(https://d1nuzc1w51n1es.cloudfront.net/865a70c3c4af55e98eb5.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://d1nuzc1w51n1es.cloudfront.net/a4ecc3f7a43f7d43ce24.woff2) format("woff2"),url(https://d1nuzc1w51n1es.cloudfront.net/bccfd5fe964d7e12ae44.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 900;
+    src: url(https://d1nuzc1w51n1es.cloudfront.net/90d55574a12424f9b9ec.woff2) format("woff2"),url(https://d1nuzc1w51n1es.cloudfront.net/dc4ea50f3189301a20dc.woff) format("woff");
+    font-display: swap
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://d1nuzc1w51n1es.cloudfront.net/c8ba52b05a9ef10f4758.woff2?v=3.19) format("woff2"),url(https://d1nuzc1w51n1es.cloudfront.net/8c206db99195777c6769.woff?v=3.19) format("woff");
+    font-display: swap;
+    unicode-range: U+0030-0039,U+0041-005A,U+0061-007A
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://d1nuzc1w51n1es.cloudfront.net/ec64ea577b0349e055ad.woff2?v=3.19) format("woff2"),url(https://d1nuzc1w51n1es.cloudfront.net/93c1301bd9f486c573b3.woff?v=3.19) format("woff");
+    font-display: swap;
+    unicode-range: U+0030-0039,U+0041-005A,U+0061-007A
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    letter-spacing: -1px;
+}
+
+body {
+    font-family: "Inter","Noto Sans KR",sans-serif
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: 0
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer
+}
+
+header {
+    min-width: 650px;
+    border-bottom: 1px solid #dce1e5;
+    height: 100px;
+}
+
+header h1 {
+    letter-spacing: -1.75px;
+}
+
+header a {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 150%;
+    color: #1e2a3c;
+}
+
+header a img {
+    border-radius: 5px;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.container {
+    max-width: 800px;
+    min-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #dce1e5;
+}
+
+.navigation a {
+    text-align: center;
+    min-width: 75px;
+    padding: 20px;
+    height: 75px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 150%;
+    color: #585d64;
+}
+
+nav a:hover {
+    background-color: #f5f6f7;
+    color: #1e2a3c;
+    border-bottom: 3px solid #1e2a3c;
+}
+
+.view-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.view-options svg {
+    width: 30px;
+    color: #1e2a3c;
+}
+
+.view-options select {
+    cursor: pointer;
+    border-color: #D7E2EB;
+    border-radius: 5px;
+    color: #1e2a3c;
+    font-size: 14px;
+    padding: 5px 17.5px;
+    line-height: 150%;
+}
+
+.view-contents {
+    margin-top: 20px;
+}
+
+.grid-view {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+}
+
+.grid-item-link {
+    display: inline-block; 
+    text-decoration: none; 
+}
+
+.grid-item {
+    border: 1px solid #f5f6f7;
+    border-radius: 5px;
+    position: relative;
+    width: 175px;  
+    height: 350px;  
+    transition: transform 0.3s ease-in-out; 
+}
+
+.grid-item-link:hover .grid-item {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.grid-item-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-image: linear-gradient(180deg, #f5f6f700 0%, #f5f6f780 33.04%, #f5f6f7e6 66.09%, #f5f6f7 90%);
+    z-index: 1;
+}
+
+.grid-item .title {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 40px; 
+    color: #263747;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.grid-item .author {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    color: #263747;
+    font-size: 15px; 
+    z-index: 2;
+}
+
+.list-view {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.list-item-link {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.list-item img {
+    width: 110px;
+    height: 55px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 1px solid #f5f6f7;
+    border-radius: 5px;
+}
+
+.list-item-infoo {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.list-item .author {
+    font-size: 13px;
+    color: #777;
+}
+
+footer {
+    min-width: 650px;
+    text-align: center;
+    height: 100px;
+    margin-top: 25px;
+    font-style: normal;
+    line-height: 150%;
+    color: #98a8b9;
+}
