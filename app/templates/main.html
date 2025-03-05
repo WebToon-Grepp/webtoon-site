@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% csrf_token %}
+<div class="container">
+    <nav class="navigation">
+        <a href="#">전체</a>
+        <a href="#">월</a>
+        <a href="#">화</a>
+        <a href="#">수</a>
+        <a href="#">목</a>
+        <a href="#">금</a>
+        <a href="#">토</a>
+        <a href="#">일</a>
+        <a href="#">완결</a>
+        <a href="#">장르별</a>
+    </nav>
+    
+    <div class="view-options">
+        <div class="display-toggle">
+            <a href="#" class="display-grid">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8,30H4a2,2,0,0,1-2-2V24a2,2,0,0,1,2-2H8a2,2,0,0,1,2,2v4A2,2,0,0,1,8,30ZM4,24v4H8V24Z"></path><path d="M18,30H14a2,2,0,0,1-2-2V24a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4A2,2,0,0,1,18,30Zm-4-6v4h4V24Z"></path><path d="M28,30H24a2,2,0,0,1-2-2V24a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4A2,2,0,0,1,28,30Zm-4-6v4h4V24Z"></path><path d="M8,20H4a2,2,0,0,1-2-2V14a2,2,0,0,1,2-2H8a2,2,0,0,1,2,2v4A2,2,0,0,1,8,20ZM4,14v4H8V14Z"></path><path d="M18,20H14a2,2,0,0,1-2-2V14a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4A2,2,0,0,1,18,20Zm-4-6v4h4V14Z"></path><path d="M28,20H24a2,2,0,0,1-2-2V14a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4A2,2,0,0,1,28,20Zm-4-6v4h4V14Z"></path><path d="M8,10H4A2,2,0,0,1,2,8V4A2,2,0,0,1,4,2H8a2,2,0,0,1,2,2V8A2,2,0,0,1,8,10ZM4,4V8H8V4Z"></path><path d="M18,10H14a2,2,0,0,1-2-2V4a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2V8A2,2,0,0,1,18,10ZM14,4V8h4V4Z"></path><path d="M28,10H24a2,2,0,0,1-2-2V4a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2V8A2,2,0,0,1,28,10ZM24,4V8h4V4Z"></path>
+                </svg>
+            </a>
+            <a href="#" class="display-list">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 2 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 6L21 6.00078M8 12L21 12.0008M8 18L21 18.0007M3 6.5H4V5.5H3V6.5ZM3 12.5H4V11.5H3V12.5ZM3 18.5H4V17.5H3V18.5Z"></path>
+                </svg>
+            </a>
+        </div>
+        <select class="sort-order">
+            <option value="views">조회순</option>
+            <option value="likes">인기순</option>
+        </select>
+    </div>
+
+    <div class="view-contents">
+
+        <div class="grid-view" style="display: flex;">
+            <a href="#" class="grid-item-link">
+                <div class="grid-item">
+                    <img src="https://kr-a.kakaopagecdn.com/P/C/4255/c2/2x/dbbf91a3-9001-420d-ab36-000677168d64.png">
+                    <div class="grid-item-info">
+                        <div class="title">그대를 만나고 그대의 머릿결을 만질수가</div>
+                        <div class="author">작가 1</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="grid-item-link">
+                <div class="grid-item">
+                    <img src="https://kr-a.kakaopagecdn.com/P/C/2153/c2/2x/b06e1f05-b1dd-4aa4-b7ea-8bce178f650c.png">
+                    <div class="grid-item-info">
+                        <div class="title">타이틀 1</div>
+                        <div class="author">작가 1</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="grid-item-link">
+                <div class="grid-item">
+                    <img src="https://kr-a.kakaopagecdn.com/P/C/3678/c2/2x/8d3053c5-9503-4705-94a9-255ad15fa47e.png">
+                    <div class="grid-item-info">
+                        <div class="title">타이틀 1</div>
+                        <div class="author">작가 1</div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="grid-item-link">
+                <div class="grid-item">
+                    <img src="https://image-comic.pstatic.net/webtoon/834566/thumbnail/thumbnail_IMAG21_bb1d8b27-105c-4c68-9eff-3709a3373c92.jpg">
+                    <div class="grid-item-info">
+                        <div class="title">타이틀 1</div>
+                        <div class="author">작가 1</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <ul class="list-view" style="display: none;">
+            <li class="list-item">
+                <a href="#" class="list-item-link">
+                    <img src="https://kr-a.kakaopagecdn.com/P/C/4255/c2/2x/dbbf91a3-9001-420d-ab36-000677168d64.png">
+                    <div class="list-item-info">
+                        <div class="title">타이틀 1</div>
+                        <div class="author">작가 1</div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-item-link">
+                    <img src="https://kr-a.kakaopagecdn.com/P/C/2153/c2/2x/b06e1f05-b1dd-4aa4-b7ea-8bce178f650c.png">
+                    <div class="list-item-info">
+                        <div class="title">타이틀 1</div>
+                        <div class="author">작가 1</div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-item-link">
+                    <img src="https://kr-a.kakaopagecdn.com/P/C/3678/c2/2x/8d3053c5-9503-4705-94a9-255ad15fa47e.png">
+                    <div class="list-item-info">
+                        <div class="title">타이틀 1</div>
+                        <div class="author">작가 1</div>
+                    </div>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#" class="list-item-link">
+                    <img src="https://kr-a.kakaopagecdn.com/P/C/4255/c2/2x/dbbf91a3-9001-420d-ab36-000677168d64.png">
+                    <div class="list-item-info">
+                        <div class="title">타이틀 1</div>
+                        <div class="author">작가 1</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<script>
+    const csrfToken = '{{ csrf_token }}';
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const gridButton = document.querySelector(".display-grid");
+        const listButton = document.querySelector(".display-list");
+        const gridView = document.querySelector(".grid-view");
+        const listView = document.querySelector(".list-view");
+
+        function fadeIn(element, display) {
+            element.style.display = display; 
+            element.style.opacity = "0";
+            setTimeout(() => {
+                element.style.opacity = "1";
+            }, 10);
+        }
+    
+        function fadeOut(element) {
+            element.style.opacity = "0";
+            setTimeout(() => {
+                element.style.display = "none"; 
+            }, 300);
+        }
+    
+        gridButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            listView.style.display = "none"; 
+            fadeOut(listView)
+            fadeIn(gridView, "flex")
+        });
+    
+        listButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            gridView.style.display = "none"; 
+            fadeOut(gridView)
+            fadeIn(listView, "block")
+        });
+    });
+</script>
+    
+{% load static %}
+<script src="{% static 'js/script.js' %}?v={{ timestamp }}"></script>
+
+{% endblock %}
+    
