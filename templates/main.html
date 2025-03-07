@@ -2,7 +2,6 @@
 
 {% block content %}
 
-{% csrf_token %}
 <div class="container">
     <nav class="navigation">
         <a href="#">전체</a>
@@ -121,9 +120,6 @@
 </div>
 
 <script>
-    const csrfToken = '{{ csrf_token }}';
-</script>
-<script>
     document.addEventListener("DOMContentLoaded", function () {
         const gridButton = document.querySelector(".display-grid");
         const listButton = document.querySelector(".display-list");
@@ -161,8 +157,7 @@
     });
 </script>
     
-{% load static %}
-<script src="{% static 'js/script.js' %}?v={{ timestamp }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 {% endblock %}
     
