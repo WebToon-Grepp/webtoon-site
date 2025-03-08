@@ -9,19 +9,20 @@ CONFIG = {
     "user": os.getenv("FLASK_USER")
 }
 
-def get_redshift_connection():
+def get_database_connection():
+    print(CONFIG)
     try:
         conn = psycopg2.connect(**CONFIG)
         conn.set_client_encoding('UTF8')
         return conn
     except Exception as e:
-        print(f"Error connecting to Redshift: {e}")
+        print(f"Error connecting to Database: {e}")
         return None
 
 def execute_query(query):
     try:
         print(f"Executing query: {query}")
-        conn = get_redshift_connection()
+        conn = get_database_connection()
         if conn:
             with conn.cursor() as cur:
                 cur.execute(query)
