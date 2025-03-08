@@ -10,7 +10,6 @@ CONFIG = {
 }
 
 def get_database_connection():
-    print(CONFIG)
     try:
         conn = psycopg2.connect(**CONFIG)
         conn.set_client_encoding('UTF8')

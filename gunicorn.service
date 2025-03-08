@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn daemon for Flask app
+After=network.target
+
+[Service]
+User=ec2-user
+Group=ec2-user
+WorkingDirectory=/home/ec2-user/site
+ExecStart=gunicorn --log-level debug --workers 2 --bind unix:/home/ec2-user/site/app.sock wsgi:APP
+EnvironmentFile=/home/ec2-user/site/gunicorn.env
+
+[Install]
+WantedBy=multi-user.target
