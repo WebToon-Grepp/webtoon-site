@@ -2,16 +2,16 @@
 <html lang="ko">
     
     <title>{% block title %}WebToon Grepp{% endblock %}</title>
-    {% include "head.html" %}
+    {% include "layout/head.html" %}
 
     <body>
-        {% include "header.html" %}
+        {% include "layout/header.html" %}
 
         <main>
             {% block content %}{% endblock %}
         </main>
 
-        {% include "footer.html" %}
+        {% include "layout/footer.html" %}
     </body>
     
 </html>
