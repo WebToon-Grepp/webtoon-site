@@ -1,0 +1,135 @@
+
+
+.thumbnail-container {
+    position: relative; 
+    display: inline-block; 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.title-item .thumbnail {
+    width: 300px;
+    object-fit: cover;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #f5f6f7;
+    border-radius: 5px;
+}
+
+.title-item .weekday {
+    position: absolute;  
+    top: 25px;  
+    left: 10px;
+    color: white;
+    background-color: #1e2a3c;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 3px 13px;  
+}
+
+.thumbnail-container:hover  {
+    transform: scale(1.05);
+}
+
+.title-item-info {
+    display: flex;
+}
+
+.title-item-detail {
+    display: flex;
+}
+
+.title-item .platform {
+    width: 16px;
+    height: 16px;
+    margin-top: 35px;
+    margin-left: 5px;
+}
+
+.title-item .title {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.title-item .author {
+    font-size: 15px;
+    margin-left: 20px;
+    color: #777777;
+}
+
+.title-item .info {
+    margin-top: 10px;
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+.info li {
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f5f6f7;
+}
+
+.info p {
+    color: #1e2a3c;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.info img {
+    width: 22px;
+    height: 22px;
+}
+
+.episode-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f5f6f7;
+}
+
+.episode-item-link {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between; 
+    color: inherit;
+    width: 100%;
+}
+
+.episode-item .thumbnail {
+    width: 110px;
+    height: 55px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 1px solid #f5f6f7;
+    border-radius: 5px;
+}
+
+.episode-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode-item-detail {
+    width: 100px;
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.episode-item-detail {
+    display: flex;
+}
+
+.episode-item .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.episode-item .author {
+    font-size: 13px;
+    color: #777777;
+}

@@ -1,0 +1,52 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <nav class="navigation">
+        <a class="filter" data-filter="all" style="background-color: rgb(245, 246, 247); color: rgb(30, 42, 60); border-bottom: 3px solid rgb(30, 42, 60);">
+            전체
+        </a>
+        <a class="filter" data-filter="mon">월</a>
+        <a class="filter" data-filter="tue">화</a>
+        <a class="filter" data-filter="wed">수</a>
+        <a class="filter" data-filter="thu">목</a>
+        <a class="filter" data-filter="fri">금</a>
+        <a class="filter" data-filter="sat">토</a>
+        <a class="filter" data-filter="sun">일</a>
+        <a class="filter" data-filter="completed">완결</a>
+        <a class="filter" data-filter="genre">장르별</a>
+    </nav>
+    
+    <div class="view-options">
+        <div class="display-toggle">
+            <a class="display-grid">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8,30H4a2,2,0,0,1-2-2V24a2,2,0,0,1,2-2H8a2,2,0,0,1,2,2v4A2,2,0,0,1,8,30ZM4,24v4H8V24Z" fill="#1e2a3c"></path><path d="M18,30H14a2,2,0,0,1-2-2V24a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4A2,2,0,0,1,18,30Zm-4-6v4h4V24Z" fill="#1e2a3c"></path><path d="M28,30H24a2,2,0,0,1-2-2V24a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4A2,2,0,0,1,28,30Zm-4-6v4h4V24Z" fill="#1e2a3c"></path><path d="M8,20H4a2,2,0,0,1-2-2V14a2,2,0,0,1,2-2H8a2,2,0,0,1,2,2v4A2,2,0,0,1,8,20ZM4,14v4H8V14Z" fill="#1e2a3c"></path><path d="M18,20H14a2,2,0,0,1-2-2V14a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4A2,2,0,0,1,18,20Zm-4-6v4h4V14Z" fill="#1e2a3c"></path><path d="M28,20H24a2,2,0,0,1-2-2V14a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2v4A2,2,0,0,1,28,20Zm-4-6v4h4V14Z" fill="#1e2a3c"></path><path d="M8,10H4A2,2,0,0,1,2,8V4A2,2,0,0,1,4,2H8a2,2,0,0,1,2,2V8A2,2,0,0,1,8,10ZM4,4V8H8V4Z" fill="#1e2a3c"></path><path d="M18,10H14a2,2,0,0,1-2-2V4a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2V8A2,2,0,0,1,18,10ZM14,4V8h4V4Z" fill="#1e2a3c"></path><path d="M28,10H24a2,2,0,0,1-2-2V4a2,2,0,0,1,2-2h4a2,2,0,0,1,2,2V8A2,2,0,0,1,28,10ZM24,4V8h4V4Z" fill="#1e2a3c"></path>
+                </svg>
+            </a>
+            <a class="display-list">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 2 30 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 6L21 6.00078M8 12L21 12.0008M8 18L21 18.0007M3 6.5H4V5.5H3V6.5ZM3 12.5H4V11.5H3V12.5ZM3 18.5H4V17.5H3V18.5Z" fill="#1e2a3c"></path>
+                </svg>
+            </a>
+        </div>
+        <select class="sort-order">
+            <option value="views">조회순</option>
+            <option value="likes">인기순</option>
+            <option value="comments">댓글순</option>
+        </select>
+    </div>
+
+    <div class="view-contents">
+        <div class="grid-view"></div>
+        <ul class="list-view"></ul>
+    </div>
+
+</div>
+    
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+{% endblock %}
+    

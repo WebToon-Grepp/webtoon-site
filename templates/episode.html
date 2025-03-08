@@ -1,0 +1,40 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+<div class="container">
+    
+    <div class="title-view">
+    </div>
+
+    
+    <div class="view-options">
+        <div class="display-toggle">
+            <a class="display-home" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z" fill="#1e2a3c"></path>
+                </svg>
+            </a>
+        </div>
+        <select class="sort-order">
+            <option value="id">업데이트순</option>
+            <option value="likes">인기순</option>
+            <option value="comments">댓글순</option>
+        </select>
+    </div>
+
+    <div class="view-contents">
+        <ul class="episode-view"></ul>
+    </div>
+
+</div>
+
+<script>
+    let titlePlatformType = "{{ data.platform }}";
+    let titleIdType =  {{ data.id }};
+</script>
+<script src="{{ url_for("static", filename="js/script.js") }}"></script>
+<script src="{{ url_for("static", filename="js/episode.js") }}"></script>
+
+{% endblock %}
+    
