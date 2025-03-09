@@ -83,6 +83,15 @@
     height: 22px;
 }
 
+
+.info .genre {
+    color: #1e2a3c;
+    background-color: #f5f6f7;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 3px 13px;  
+}
+
 .episode-item {
     display: flex;
     align-items: center;
@@ -132,4 +141,28 @@
 .episode-item .author {
     font-size: 13px;
     color: #777777;
+}
+
+
+@media (max-width: 600px) {
+    .thumbnail-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-item .thumbnail {
+        width: 350px;
+    }
+
+    .title-item .weekday {
+        left: 40px;
+    }
+
+    .title-item-info {
+        display: block;
+    }
+
+    .title-item .info {
+        margin-right: 20px;
+    }
 }

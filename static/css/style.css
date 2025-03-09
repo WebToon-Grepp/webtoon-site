@@ -89,7 +89,7 @@ a {
 }
 
 header {
-    min-width: 850px;
+    min-width: 450px;
     border-bottom: 1px solid #dce1e5;
     height: 100px;
 }
@@ -118,7 +118,7 @@ header a img {
 
 .container {
     max-width: 800px;
-    min-width: 850px;
+    min-width: 450px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -149,7 +149,7 @@ header a img {
 }
 
 footer {
-    min-width: 850px;
+    min-width: 450px;
     text-align: center;
     height: 100px;
     margin-top: 25px;
