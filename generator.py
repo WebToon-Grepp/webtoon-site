@@ -16,7 +16,7 @@ def check_number(num):
         return "집계안됨"
 
 def generate_title_html(title_data):
-    platform, id, title, author, image_url, views, likes, comments, release_day, is_completed = title_data[0]
+    platform, id, title, author, image_url, views, likes, comments, release_day, is_completed, genre_name = title_data[0]
 
     thumbnail_url = f"{image_url}.png" if platform == 'kakao' else image_url
     platform_icon_url = "static/images/kakao.ico" if platform == 'kakao' else "static/images/naver.ico"
@@ -95,19 +95,34 @@ def generate_episode_html(episode_data):
     
     return episode_content
 
+def generate_genre_option(genre_data):
+    genre_option = "<option value=\"all\">모든 장르</option>"
+    
+    seen_genres = []
+    for genre in genre_data:
+        genre_name, count = genre
+        if genre_name in seen_genres or genre_name == "완결":
+            continue
+        seen_genres.append(genre_name)
+
+        genre_option += f"""
+            <option value="{genre_name}">{genre_name} ({count})</option>
+        """
+    
+    return genre_option
+
 def generate_html(webtoon_data):
     grid_content, list_content = "", ""
     
     seen_webtoons = []
     for webtoon in webtoon_data:
-        platform, id, title, author, image_url, views, likes, comments, release_day, is_completed = webtoon
+        platform, id, title, author, image_url, views, likes, comments, release_day, is_completed, genre_name = webtoon
         if (platform, id) in seen_webtoons:
             continue
         seen_webtoons.append((platform, id))
 
         thumbnail_url = f"{image_url}.png" if platform == 'kakao' else image_url
         platform_icon_url = "static/images/kakao.ico" if platform == 'kakao' else "static/images/naver.ico"
-        data_filter = f"{platform}_{id}_{views}_"
 
         grid_content += f"""
         <a class="grid-item-link" href="episode?platform={platform}&id={id}">

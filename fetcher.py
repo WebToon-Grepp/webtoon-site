@@ -35,7 +35,7 @@ def execute_query(query):
         print(f"Error executing query: {e}")
         return None
 
-def build_where_filter(filter=None):
+def build_where_filter(filter=None, platform="all", genre="all"):
     where_conditions = []
 
     day_mapping = {
@@ -46,6 +46,15 @@ def build_where_filter(filter=None):
     if filter in day_mapping:
         where_conditions.append(f"release_day = {day_mapping[filter]}")
 
+    if platform != "all":
+        where_conditions.append(f"platform = '{platform}'")
+
+    if genre != "all":
+        genre_conditions = []
+        for genre_name in genre.split(' '):
+            genre_conditions.append(f"genre_name LIKE '%{genre_name}%'")
+        where_conditions.append(f"({" OR ".join(genre_conditions)})")
+
     is_completed = filter == "completed"
     where_conditions.append(f"is_completed = {str(is_completed).upper()}")
 
@@ -55,7 +64,7 @@ def fetch_title_data(platform, id):
     query = f"""
         SELECT 
             * 
-        FROM site.dim_webtoon_list 
+        FROM site.dim_webtoon_titles 
         WHERE platform = '{platform}'
             AND id = {id}
         LIMIT 1;
@@ -75,12 +84,26 @@ def fetch_episode_data(platform, id, sort, limit=100):
     """
     return execute_query(query)
 
-def fetch_data(filter, sort, limit=100):
-    where_clause = build_where_filter(filter)
+def fetch_genres():
+    query = f"""
+        SELECT 
+            genre_name,
+            COUNT(*) AS count
+        FROM site.dim_webtoon_titles 
+        GROUP BY genre_name
+        ORDER BY count DESC
+        LIMIT 50;
+    """
+    
+    return execute_query(query)
+
+
+def fetch_data(filter, platform, genre, sort, limit=100):
+    where_clause = build_where_filter(filter, platform, genre)
     query = f"""
         SELECT
             * 
-        FROM site.dim_webtoon_list 
+        FROM site.dim_webtoon_titles 
         WHERE {where_clause} 
         ORDER BY {sort} DESC 
         LIMIT {limit};

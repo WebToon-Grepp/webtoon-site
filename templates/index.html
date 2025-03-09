@@ -15,7 +15,6 @@
         <a class="filter" data-filter="sat">토</a>
         <a class="filter" data-filter="sun">일</a>
         <a class="filter" data-filter="completed">완결</a>
-        <a class="filter" data-filter="genre">장르별</a>
     </nav>
     
     <div class="view-options">
@@ -31,11 +30,21 @@
                 </svg>
             </a>
         </div>
-        <select class="sort-order">
-            <option value="views">조회순</option>
-            <option value="likes">인기순</option>
-            <option value="comments">댓글순</option>
-        </select>
+        <div class="sort-options">
+            <select class="sort-option" id="sort-platform" style="margin-right: 5px;">
+                <option value="all">모든 플랫폼</option>
+                <option value="naver">네이버 웹툰</option>
+                <option value="kakao">카카오 웹툰</option>
+            </select>
+            <select class="sort-option" id="sort-genre" style="margin-right: 5px;">
+                <option value="all">모든 장르</option>
+            </select>
+            <select class="sort-option" id="sort-order">
+                <option value="views">조회순</option>
+                <option value="likes">인기순</option>
+                <option value="comments">댓글순</option>
+            </select>
+        </div>
     </div>
 
     <div class="view-contents">

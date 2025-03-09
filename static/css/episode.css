@@ -141,8 +141,12 @@
         justify-content: center;
     }
 
+    .title-item .thumbnail {
+        width: 350px;
+    }
+
     .title-item .weekday {
-        left: 65px;
+        left: 40px;
     }
 
     .title-item-info {

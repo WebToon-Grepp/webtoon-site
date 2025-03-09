@@ -7,6 +7,7 @@
 .navigation a {
     text-align: center;
     padding: 25px;
+    min-width: 80px;
     height: 75px;
     font-size: 17px;
     font-weight: 500;
@@ -154,6 +155,16 @@ nav a:hover {
 @media (max-width: 600px) {
     .navigation a {
         padding: 10px;
+        min-width: 40px;
+    }
+
+    .view-options {
+        display: block;
+    }
+
+    .sort-options {
+        display: flex;
+        justify-content: center;
     }
     
     .grid-item {
@@ -161,8 +172,6 @@ nav a:hover {
         height: 250px;  
         transition: transform 0.3s ease-in-out; 
     }
-
-    
 
     .grid-item-info {
         width: 130px;  
