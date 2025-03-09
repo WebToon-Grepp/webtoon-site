@@ -133,3 +133,23 @@
     font-size: 13px;
     color: #777777;
 }
+
+
+@media (max-width: 600px) {
+    .thumbnail-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-item .weekday {
+        left: 65px;
+    }
+
+    .title-item-info {
+        display: block;
+    }
+
+    .title-item .info {
+        margin-right: 20px;
+    }
+}
