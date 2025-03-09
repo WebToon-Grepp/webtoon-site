@@ -83,6 +83,15 @@
     height: 22px;
 }
 
+
+.info .genre {
+    color: #1e2a3c;
+    background-color: #f5f6f7;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 3px 13px;  
+}
+
 .episode-item {
     display: flex;
     align-items: center;

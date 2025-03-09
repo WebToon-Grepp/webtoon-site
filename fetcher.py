@@ -63,10 +63,31 @@ def build_where_filter(filter=None, platform="all", genre="all"):
 def fetch_title_data(platform, id):
     query = f"""
         SELECT 
-            * 
+            platform, 
+            id, 
+            title, 
+            author, 
+            image_url, 
+            views, 
+            likes, 
+            comments, 
+            release_day, 
+            is_completed,
+            STRING_AGG(genre_name, '/') AS genre_names
         FROM site.dim_webtoon_titles 
         WHERE platform = '{platform}'
             AND id = {id}
+        GROUP BY 
+            platform, 
+            id, 
+            title, 
+            author, 
+            image_url, 
+            views, 
+            likes, 
+            comments, 
+            release_day, 
+            is_completed
         LIMIT 1;
     """
     
